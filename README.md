@@ -37,4 +37,4 @@ sudo make install
 
 ## Test Environment
 
-![测试环境](.\README.assets\image.png)
+![测试环境](.\.assets\image.png)
