@@ -1,8 +1,8 @@
 # from src.SGBM import *
-from src.object_detector import *
+from object_detector import *
 import cv2
 import numpy as np
-from src.solver import *
+from solver import *
 
 
 MODEL_PATH = "../weights/best.pt"
@@ -33,10 +33,7 @@ def main():
             break
         left = frame[:, 0:640]
         right = frame[:, 640:1280]
-        if SGM:
-            left_gray = cv2.cvtColor(left, cv2.COLOR_BGR2GRAY)
-            right_gray = cv2.cvtColor(right, cv2.COLOR_BGR2GRAY)
-            disp = sg.compute(left_gray, right_gray)
+
         if DEBUG:
             cv2.imwrite("LeftImage.jpg", left)
             cv2.imwrite("RightImage.jpg", right)
